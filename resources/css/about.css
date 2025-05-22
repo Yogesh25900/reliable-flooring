@@ -1,0 +1,146 @@
+.about-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .about-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .about-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center; /* vertically center */
+    justify-content: flex-start; /* align to the left */
+    background: rgba(0, 0, 0, 0.4); /* optional dark overlay */
+  }
+  
+  .text-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    margin-left: 5%;
+    max-width: 500px;
+    border-radius: 8px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .text-box h1 {
+    margin-bottom: 10px;
+    font-size: 32px;
+  }
+  
+  .text-box p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  /* Fade-in effect */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+    .about-section {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full-screen hero style */
+  }
+
+  .about-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6); /* Slight dark overlay for text readability */
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .text-box {
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.05); /* Optional glassy effect */
+    padding: 2rem 3rem;
+    border-radius: 20px;
+    backdrop-filter: blur(8px); /* Modern blur effect */
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .text-box h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .text-box p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #f1f1f1;
+  }
+
+  @media (max-width: 768px) {
+    .text-box {
+      padding: 1.5rem 1.5rem;
+    }
+
+    .text-box h1 {
+      font-size: 2rem;
+    }
+
+    .text-box p {
+      font-size: 1rem;
+    }
+  }
+
+
+  .about-section h2 {
+      padding-top: 40px;
+
+  font-size: 2.2rem; /* You can adjust this */
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+
+.about-section strong {
+  font-weight: normal;
+}
