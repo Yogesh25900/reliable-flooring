@@ -12,7 +12,7 @@
      <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Sports Flooring in Nepal | Reliable Flooring Nepal</title>
+  <title>Heterogeneous Flooring in Nepal | Reliable Flooring Nepal</title>
   
   <!-- Meta Description -->
   <meta name="description" content="Homogeneous vinyl flooring for hospitals, schools, and commercial buildings in Kathmandu. Easy to clean, durable, and antibacterial." />
@@ -101,7 +101,7 @@
     <div id="cp-content-wrap">
       <div id="cp-title-bar">
         <span id="cp-title-bold">HETEROGENEOUS</span>
-        <span id="cp-title-light">VNYL FLOORING</span>
+        <span id="cp-title-light">VINYL FLOORING</span>
       </div>
       <p id="cp-description">
 Heterogeneous vinyl flooring is a multi-layered floor covering designed for durability, style, and performance. It combines a printed decorative layer with a protective wear layer, making it ideal for high-traffic areas like hospitals, schools, and offices. With superior sound insulation, stain resistance, and easy maintenance, it offers both functionality and aesthetic appeal in commercial and residential spaces.      </p>
@@ -122,12 +122,19 @@ Heterogeneous vinyl flooring is a multi-layered floor covering designed for dura
           <img alt="Classroom view" src="{{ asset('images/uploads/img3.png') }}"/>
         </div>
       </div>
+
+<div>
+      <h2 id="cp-section-title">STRUCTURE</h2>
+
+<div class="structure-wrapper">
+  <img src="{{ asset('images/products/productstructure.png') }}" alt="Structure Layer Diagram" />
+</div>
+
 </section>
 
 
 
-<!DOCTYPE html>
-<html lang="en">
+
 <style>
   section.palette-wrapper {
     max-width: 960px;
@@ -166,36 +173,57 @@ Heterogeneous vinyl flooring is a multi-layered floor covering designed for dura
   }
 </style>
 
-<section class="palette-wrapper">
-  <section class="palette-header">
-    <h2>Warm Wooden Tone Palette</h2>
-    <p>Inspired by natural brick and polished wood environments</p>
+  <section id="productGridWrapper">
+      <section id="paletteHeading">
+    <h2>Color Palette</h2>
+  <p>Crafted to match timeless flooring aesthetics</p>
   </section>
 
-  <section class="palette-grid">
-    <section class="color-box light" style="background-color: #e6c9a2;">#e6c9a2</section>
-    <section class="color-box light" style="background-color: #baa387;">#baa387</section>
-    <section class="color-box light" style="background-color: #dfa673;">#dfa673</section>
-    <section class="color-box light" style="background-color: #8d5b23;">#8d5b23</section>
+<section id="topRow">
+  <!-- Left: Large reference image -->
+  <div class="referenceImage">
+    <img src="{{ asset('images/Heterogenious color options/heterogeneousrefimage.png') }}" alt="Reference Room">
+  </div>
 
-    <section class="color-box dark" style="background-color: #2e1d0a;">#2e1d0a</section>
-    <section class="color-box dark" style="background-color: #5d3712;">#5d3712</section>
-    <section class="color-box light" style="background-color: #eddecb;">#eddecb</section>
-    <section class="color-box light" style="background-color: #654923;">#654923</section>
+  <!-- Right: 2 vertical swatches -->
+  <div class="verticalSwatches">
+    <div class="swatchCard">
+      <img src="{{ asset('images/Heterogenious color options/YD115.png') }}" alt="YD115">
+      <p>YD115</p>
+    </div>
+    <div class="swatchCard">
+      <img src="{{ asset('images/Heterogenious color options/YD-199-04.png') }}" alt="25034">
+      <p>YD-199-04</p>
+    </div>
 
-    <section class="color-box light" style="background-color: #ae875e;">#ae875e</section>
-    <section class="color-box light" style="background-color: #bd7b3a;">#bd7b3a</section>
-    <section class="color-box light" style="background-color: #f7f6f1;">#f7f6f1</section>
-    <section class="color-box light" style="background-color: #be9e67;">#be9e67</section>
-  </section>
+      <div class="swatchCard">
+    <img src="{{ asset('images/Heterogenious color options/YD-199-06.png') }}" alt="25047">
+    <p>YD-199-06</p>
+  </div>
+
+ 
+  </div>
 </section>
 
-      <!-- ✅ STRUCTURE SECTION -->
-<h2 id="cp-section-title">STRUCTURE</h2>
+<!-- Bottom row: 5 swatches -->
+<section id="bottomRow">
 
-<div class="structure-wrapper">
-  <img src="{{ asset('images/uploads/img4.png') }}" alt="Structure Layer Diagram" />
-</div>
+  <div class="swatchCard">
+    <img src="{{ asset('images/Heterogenious color options/YD8809.png') }}" alt="8915">
+    <p>YD8809</p>
+  </div>
+  <div class="swatchCard">
+    <img src="{{ asset('images/Heterogenious color options/YD8814.png') }}" alt="CN-2301">
+    <p>YD8814</p>
+  </div>
+  
+</section>
+
+
+</section>
+
+
+      <!-- ✅ STRUCTURE SECTION -->
 
 
 

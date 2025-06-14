@@ -35,18 +35,27 @@ use Spatie\Sitemap\Tags\Url;
 Route::get('/generate-sitemap', function () {
     Sitemap::create()
         ->add(Url::create('/'))
-        ->add(Url::create('/products/homogeneous'))
+        ->add(Url::create('/products/homogeneous-flooring'))
         ->add(Url::create('/products/luxury-vinyl'))
         ->add(Url::create('/products/spc-flooring'))
+        ->add(Url::create('/products/sports-flooring'))
+        ->add(Url::create('/products/conductive-flooring/tiles'))
+        ->add(Url::create('/products/conductive-flooring/rolls'))
         ->writeToFile(public_path('sitemap.xml'));
 
-    return 'Sitemap generated!';
+    return '✅ Sitemap generated at /public/sitemap.xml';
 });
-
 
 
 Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
 
 
 
+Route::get('/products/conductive-flooring/tiles', function () {
+    return view('products.esd-tile'); // path: resources/views/products/esd-tile.blade.php
+});
+
+Route::get('/products/conductive-flooring/rolls', function () {
+    return view('products.esd-roll'); // path: resources/views/products/esd-tile.blade.php
+});
 

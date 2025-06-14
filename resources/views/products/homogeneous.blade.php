@@ -150,80 +150,70 @@
 </section>
 
 
-<!-- Full-width background -->
-<section id="background">
-  
-  <!-- Centered Heading -->
-  <section id="paletteHeading">
+
+
+
+  <section id="productGridWrapper">
+      <section id="paletteHeading">
     <h2>Color Palette</h2>
   <p>Crafted to match timeless flooring aesthetics</p>
   </section>
 
-  <!-- Main Wrapper -->
-  <section id="wrapper">
+<section id="topRow">
+  <!-- Left: Large reference image -->
+  <div class="referenceImage">
+    <img src="{{ asset('images/products/Homogeneous.png') }}" alt="Reference Room">
+  </div>
 
-    <!-- Image -->
-    <section id="imageWrapper">
-      <img src="{{ asset('images/palette/flooringcolor.png') }}" alt="Wedding Room Palette">
-    </section>
+  <!-- Right: 2 vertical swatches -->
+  <div class="verticalSwatches">
+    <div class="swatchCard">
+      <img src="{{ asset('images/Homogenious colors options/25024.png') }}" alt="25024">
+      <p>25024</p>
+    </div>
+    <div class="swatchCard">
+      <img src="{{ asset('images/Homogenious colors options/25034.png') }}" alt="25034">
+      <p>25034</p>
+    </div>
 
-    <!-- Color Grid -->
-   <section id="paletteGrid">
+      <div class="swatchCard">
+    <img src="{{ asset('images/Homogenious colors options/25047.png') }}" alt="25047">
+    <p>25047</p>
+  </div>
 
-  <section class="colorCard">
-    <section class="colorBox">
-      <img src="{{ asset('images/palette/img1.jpg') }}" alt="Natural Oak">
-    </section>
-    <p class="colorLabel">Natural Oak</p>
-  </section>
+ 
+  </div>
+</section>
 
-  <section class="colorCard">
-    <section class="colorBox">
-      <img src="{{ asset('images/palette/img2.jpg') }}" alt="Warm Walnut">
-    </section>
-    <p class="colorLabel">Warm Walnut</p>
-  </section>
+<!-- Bottom row: 5 swatches -->
+<section id="bottomRow">
 
-  <section class="colorCard">
-    <section class="colorBox">
-      <img src="{{ asset('images/palette/img3.jpg') }}" alt="Vintage Grey">
-    </section>
-    <p class="colorLabel">Vintage Grey</p>
-  </section>
+  <div class="swatchCard">
+    <img src="{{ asset('images/Homogenious colors options/8915.png') }}" alt="8915">
+    <p>8915</p>
+  </div>
+  <div class="swatchCard">
+    <img src="{{ asset('images/Homogenious colors options/CN-2301.png') }}" alt="CN-2301">
+    <p>CN-2301</p>
+  </div>
+  <div class="swatchCard">
+    <img src="{{ asset('images/Homogenious colors options/CN-2306.png') }}" alt="CN-2306">
+    <p>CN-2306</p>
+  </div>
+  <div class="swatchCard">
+    <img src="{{ asset('images/Homogenious colors options/Y822A-101.PNG') }}" alt="Y822A-101">
+    <p>Y822A-101</p>
+  </div>
+  <div class="swatchCard">
+    <img src="{{ asset('images/Homogenious colors options/Y822A-602.png') }}" alt="Y822A-602">
+    <p>Y822A-602</p>
+  </div>
+</section>
 
-  <section class="colorCard">
-    <section class="colorBox">
-      <img src="{{ asset('images/palette/img4.jpg') }}" alt="Rich Teak">
-    </section>
-    <p class="colorLabel">Rich Teak</p>
-  </section>
-
-  <section class="colorCard">
-    <section class="colorBox">
-      <img src="{{ asset('images/palette/img5.jpg') }}" alt="Beige Marble">
-    </section>
-    <p class="colorLabel">Beige Marble</p>
-  </section>
-
-  <section class="colorCard">
-    <section class="colorBox">
-      <img src="{{ asset('images/palette/img6.jpg') }}" alt="Classic Cherry">
-    </section>
-    <p class="colorLabel">Classic Cherry</p>
-  </section>
-
-  <section class="colorCard">
-    <section class="colorBox">
-      <img src="{{ asset('images/palette/img7.jpg') }}" alt="Textured Stone">
-    </section>
-    <p class="colorLabel">Textured Stone</p>
-  </section>
 
 </section>
 
-  </section>
-</section>
-
+ 
 
 
 <section id="homogeneous-product-info">

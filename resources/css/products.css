@@ -521,7 +521,6 @@
 #cp-main-wrapper,
 #cp-table-section {
   width: 100%;
-  max-width: 1200px;
   margin: auto;
   padding: 0 30px;
 }
@@ -541,9 +540,9 @@
   max-width: 100%;
   width: 100%;
   height: auto;
-  border: 1.5px dashed #aaa;
+  /* border: 1.5px dashed #aaa; */
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); */
   transition: transform 0.3s ease;
 }
 
@@ -704,7 +703,7 @@ html, body {
 #cp-main-wrapper {
   width: 100%;
   max-width: none;
-  padding: 0;
+  padding: 30px;
   margin: 0;
   box-sizing: border-box;
 }
@@ -1670,143 +1669,194 @@ tbody tr:nth-of-type(19) ~ tr:nth-of-type(-n+24) td {
 
 
 
-/* Background Section */
-#background {
-  background-color: #f0e9e2;
-  padding: 40px 0;
-}
-
-/* Centered Content Wrapper */
-#wrapper {
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 0 16px;
-  text-align: center;
-}
-
-/* Image Section */
-#imageWrapper {
-  overflow: hidden;
-  border-radius: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 24px;
-}
-
-#imageWrapper img {
-  width: 700px;
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  display: block;
-  margin: 0 auto;
-}
-
-/* Heading Section */
 #paletteHeading {
+  width: 100%;
   text-align: center;
-  margin: 24px 0 16px;
-  padding: 0 12px;
+  padding: 40px 20px 20px;
+  background-color: #ffffff;
 }
 
 #paletteHeading h2 {
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 600;
-  color: #333;
-  margin-bottom: 6px;
+  color: #222;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
 }
 
 #paletteHeading p {
   font-size: 1rem;
-  color: #666;
+  color: #555;
+  margin: 0;
+  line-height: 1.4;
 }
 
-/* Color Grid and Cards */
-#paletteGrid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 12px;
-  margin-top: 12px;
+
+/* === MAIN WRAPPER === */
+#productGridWrapper {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background: #fff;
 }
 
-.colorCard {
+/* === TOP SECTION: REFERENCE IMAGE + VERTICAL SWATCHES === */
+#topRow {
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+  padding: 40px 40px;
+  flex-wrap: wrap;
+}
+
+/* === REFERENCE IMAGE === */
+.referenceImage {
+  flex: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+.referenceImage img {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  max-width: 800px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .referenceImage img {
+    max-width: 100%;
+    max-height: 300px;
+  }
+}
+
+
+/* === VERTICAL SWATCHES === */
+.verticalSwatches {
+  flex: 0.9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.verticalSwatches .swatchCard {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  margin-bottom: 24px;
 }
 
-.colorBox {
+/* === SHARED SWATCH CARD === */
+.swatchCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   width: 100%;
-  height: 240px;
-  border-radius: 8px;
-  border: 1px solid #e0e0e0;
 }
 
-.colorLabel {
+.swatchCard img {
+  width: 100%;
+  max-width: 180px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.swatchCard p {
+  margin-top: 8px;
   font-size: 14px;
-  color: #444;
+  color: #333;
   font-weight: 500;
   text-align: center;
-  word-break: break-word;
 }
 
-.light { background-color: #fff; }
-.dark { background-color: #000; color: #fff; }
+/* === BOTTOM GRID SWATCHES === */
+#bottomRow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 36px;
+  justify-items: center;
+  padding: 30px 40px;
+}
 
-/* Responsive Layouts */
+#bottomRow .swatchCard {
+  max-width: 180px;
+  width: 100%;
+}
+
+/* === RESPONSIVE BREAKPOINTS === */
 @media (max-width: 1024px) {
-  #wrapper {
-    padding: 12px;
+  #topRow {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
   }
 
-  #paletteGrid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+  .referenceImage {
+    width: 100%;
   }
 
-  .colorBox {
-    height: 200px;
+  .referenceImage img {
+    width: 95vw;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Make both vertical and bottom swatches stack in 2 columns */
+  .verticalSwatches {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .verticalSwatches .swatchCard {
+    flex: 0 0 45%;
+    margin-bottom: 16px;
+    max-width: 180px;
+  }
+
+  #bottomRow {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 20px;
+  }
+
+  #bottomRow .swatchCard {
+    max-width: 100%;
   }
 }
 
 @media (max-width: 600px) {
-  #wrapper {
-    padding: 8px;
+  .verticalSwatches {
+    flex-direction: column;
+    align-items: center;
   }
 
-  #paletteGrid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
+  .verticalSwatches .swatchCard {
+    flex: none;
+    width: 90vw;
   }
 
-  .colorBox {
-    height: 180px;
+  #bottomRow {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
-  #paletteHeading h2 {
-    font-size: 1.4rem;
+  #bottomRow .swatchCard {
+    max-width: 90vw;
   }
 
-  #paletteHeading p {
-    font-size: 0.9rem;
+  .swatchCard img {
+    width: 120px;
+    height: 120px;
   }
-}
-
-
-.colorBox {
-  width: 100%;
-  height: 240px;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid #e0e0e0;
-}
-
-.colorBox img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 8px;
 }

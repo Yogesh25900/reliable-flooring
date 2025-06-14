@@ -24,7 +24,8 @@
 
     .lottie-animation {
       max-width: 400px;
-      margin-bottom: 2rem;
+      max-height:300px;
+      margin-bottom: .2rem;
     }
 
     .error-content {

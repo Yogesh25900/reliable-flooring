@@ -84,7 +84,7 @@
       <img src="{{ asset('images/uploads/basketbalcourt2.jpg') }}" alt="Indoor Basketball Court">
     </div>
     <div class="sports-frame frame-down">
-      <img src="{{ asset('images/uploads/indoor-basketball-court.jpg') }}" alt="Gym Flooring">
+      <img src="{{ asset('images/products/Badminton.png') }}" alt="Badminton Flooring">
     </div>
     <div class="sports-frame frame-mid">
       <img src="{{ asset('images/uploads/tennisflooring.png') }}" alt="Multipurpose Sports Floor">
@@ -101,7 +101,7 @@
         <h1 id="sportsHeading">Features of Sports Flooring</h1>
         <ul id="sportsFeaturesList">
           <li data-img="{{ asset('images/products/Basketball.png')}}">Durable surface for high-impact activities</li>
-          <li data-img="{{ asset('images/products/Batmenton.png')}}">Shock absorption reduces injuries</li>
+          <li data-img="{{ asset('images/products/Badminton.png')}}">Shock absorption reduces injuries</li>
          <li data-img="{{ asset('images/products/Tabal Tennis.png') }}">Anti-slip texture for safety</li>
 <li data-img="{{ asset('images/products/Tennis.png') }}">Easy maintenance and cleaning</li>
 <li data-img="{{ asset('images/products/Vollyball.png') }}">Moisture and stain resistance</li>
