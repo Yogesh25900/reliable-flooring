@@ -48,15 +48,16 @@
 
     <!-- Social Media Icons -->
     <div class="social-icons">
-      <a href="https://facebook.com/yourpage" class="social-icon" aria-label="Facebook">
+      <a href="https://www.facebook.com/share/17va5tGZ8f/?mibextid=wwXIfr" class="social-icon" target="_blank" aria-label="Facebook">
         <i class="fab fa-facebook-f" aria-hidden="true"></i>
       </a>
-      <a href="https://instagram.com/yourpage" class="social-icon" aria-label="Instagram">
+      <a href="https://instagram.com/reliable.flooring/" class="social-icon" target="_blank" aria-label="Instagram">
         <i class="fab fa-instagram" aria-hidden="true"></i>
       </a>
-      <a href="https://tiktok.com/@yourpage" class="social-icon" aria-label="TikTok">
-        <i class="fab fa-tiktok" aria-hidden="true"></i>
-      </a>
+    <a href="https://wa.me/9779818303751" target="_blank" class="social-icon" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp" aria-hidden="true"></i>
+</a>
+
     </div>
 
   </div>

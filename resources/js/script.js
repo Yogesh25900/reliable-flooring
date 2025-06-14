@@ -388,3 +388,31 @@ const filterButtons = document.querySelectorAll(".list");
 
 
 
+ document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const allItems = document.querySelectorAll('.faq-item');
+
+      allItems.forEach(item => {
+        if (item !== button.parentElement) {
+          item.classList.remove('open');
+          const answer = item.querySelector('.faq-answer');
+          answer.style.maxHeight = null;
+          answer.style.padding = '0 24px';
+        }
+      });
+
+      const item = button.parentElement;
+      const answer = item.querySelector('.faq-answer');
+      item.classList.toggle('open');
+
+      if (item.classList.contains('open')) {
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        answer.style.padding = '0px 24px 20px';
+      } else {
+        answer.style.maxHeight = null;
+        answer.style.padding = '0 24px';
+      }
+    });
+  });
+
+

@@ -57,22 +57,27 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+<link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+
 </head>
 <body>
     @include('partials.navbar')
 
+<div id="fog-hero-wrapper">
+    <img src="{{ asset('images/products/homogeneous-mainpagebg.png') }}"
+         alt="Homogeneous flooring installed in a hospital room in Kathmandu"
+         loading="lazy"
+         id="fog-hero-bg" />
 
-    
- <div class="product-image-wrapper" id="home">
-    <img src="{{ asset('images/products/homogeneous-mainpagebg.png') }}" alt="Homogeneous flooring installed in a hospital room in Kathmandu" loading="lazy">
-    <div class="product-item-text-overlay">
-        <h1 class="poppins-black">Homogeneous Flooring</h1>
-        <p class="poppins-regular">
+    <div id="fog-hero-overlay">
+        <div id="fog-hero-fog"></div> <!-- ✅ Smoky fog -->
+
+        <h1 id="fog-hero-title">Homogeneous Flooring</h1>
+        <p id="fog-hero-desc">
             Homogeneous vinyl flooring, with flexible and diverse design choices, with high wear resistance, clean antibacterial, anti-pollution, health and environmental protection, easy to clean and maintain many excellent performance, it is widely used in high-traffic commercial and industrial fields, including medical institutions, old-age institutions, educational institutions, transportation places, office buildings, shopping malls, factories and so on.
         </p>
     </div>
 </div>
-
 
 
 <section id="product-specifications" class="product-specifications">
@@ -145,53 +150,78 @@
 </section>
 
 
+<!-- Full-width background -->
+<section id="background">
+  
+  <!-- Centered Heading -->
+  <section id="paletteHeading">
+    <h2>Color Palette</h2>
+  <p>Crafted to match timeless flooring aesthetics</p>
+  </section>
 
+  <!-- Main Wrapper -->
+  <section id="wrapper">
 
+    <!-- Image -->
+    <section id="imageWrapper">
+      <img src="{{ asset('images/palette/flooringcolor.png') }}" alt="Wedding Room Palette">
+    </section>
 
+    <!-- Color Grid -->
+   <section id="paletteGrid">
 
-<section id="rejuvenation-palette" style="padding: 2rem; background: #ffffff; width: 100%;">
-  <h2 style="font-family: sans-serif; font-size: 2rem; font-weight: bold; margin-bottom: 2rem; text-align: center;">Rejuvenation Collection</h2>
+  <section class="colorCard">
+    <section class="colorBox">
+      <img src="{{ asset('images/palette/img1.jpg') }}" alt="Natural Oak">
+    </section>
+    <p class="colorLabel">Natural Oak</p>
+  </section>
 
-  <div class="palette-container">
-    
-    <div class="swatch-box">
-      <div style="width: 100%; height: 120px; background: #f4f4f2;"></div>
-      <small>CN-2301</small><br>
-      <strong>High Reflective White</strong><br>
-      <small>Interior</small>
-    </div>
+  <section class="colorCard">
+    <section class="colorBox">
+      <img src="{{ asset('images/palette/img2.jpg') }}" alt="Warm Walnut">
+    </section>
+    <p class="colorLabel">Warm Walnut</p>
+  </section>
 
-    <div class="swatch-box">
-      <div style="width: 100%; height: 120px; background: #f5f3ec;"></div>
-      <small>25024</small><br>
-      <strong>Greek Villa</strong><br>
-      <small>Interior / Exterior</small>
-    </div>
+  <section class="colorCard">
+    <section class="colorBox">
+      <img src="{{ asset('images/palette/img3.jpg') }}" alt="Vintage Grey">
+    </section>
+    <p class="colorLabel">Vintage Grey</p>
+  </section>
 
-    <div class="swatch-box">
-      <div style="width: 100%; height: 120px; background: #eae3db;"></div>
-      <small>YB22A-101</small><br>
-      <strong>Light Coir</strong><br>
-      <small>Interior / Exterior</small>
-    </div>
+  <section class="colorCard">
+    <section class="colorBox">
+      <img src="{{ asset('images/palette/img4.jpg') }}" alt="Rich Teak">
+    </section>
+    <p class="colorLabel">Rich Teak</p>
+  </section>
 
-    <div class="swatch-box">
-      <div style="width: 100%; height: 120px; background: #dcc4b4;"></div>
-      <small>CN-2306</small><br>
-      <strong>Townhouse Tan</strong><br>
-      <small>Interior / Exterior</small>
-    </div>
+  <section class="colorCard">
+    <section class="colorBox">
+      <img src="{{ asset('images/palette/img5.jpg') }}" alt="Beige Marble">
+    </section>
+    <p class="colorLabel">Beige Marble</p>
+  </section>
 
-    
+  <section class="colorCard">
+    <section class="colorBox">
+      <img src="{{ asset('images/palette/img6.jpg') }}" alt="Classic Cherry">
+    </section>
+    <p class="colorLabel">Classic Cherry</p>
+  </section>
 
-    <!-- Add more swatches here as needed -->
+  <section class="colorCard">
+    <section class="colorBox">
+      <img src="{{ asset('images/palette/img7.jpg') }}" alt="Textured Stone">
+    </section>
+    <p class="colorLabel">Textured Stone</p>
+  </section>
 
-  </div>
+</section>
 
-  <!-- <p style="margin-top: 1rem; font-size: 0.9rem; color: #555;">
-  *We have many more color options available. Contact us or visit our showroom to explore the full range.
-</p> -->
-
+  </section>
 </section>
 
 
@@ -410,6 +440,17 @@
 
     @include('partials.footer')
 
+     <div class="mobile-floating-icons">
+  <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://instagram.com" target="_blank"aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://wa.me/9779818303751" target="_blank" class="social-icon" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp" aria-hidden="true"></i>
+</a>
+</div>
     <script src="{{ asset('js/script.js') }}"></script>
 </body>
 

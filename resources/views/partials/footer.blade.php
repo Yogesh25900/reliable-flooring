@@ -3,21 +3,32 @@
     <!-- Map -->
     <div class="map-container">
       <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3357.5827133543958!2d85.3299792!3d27.706138399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190a74aa1f23%3A0x74ebef82ad0e5c15!2sSoftwarica%20College%20of%20IT%20and%20E-Commerce!5e1!3m2!1sen!2snp!4v1746859602601!5m2!1sen!2snp" 
-        width="100%" height="100%" style="border:0;" 
+ src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13433.558578928007!2d85.32102048397066!3d27.679905890830327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190005580711%3A0x278be37f818bb3f9!2sReliable%20Flooring%20and%20Fixing%20services!5e1!3m2!1sen!2snp!4v1748237847366!5m2!1sen!2snp" 
+  width=100% height= 100%
+   style="border:0;" 
         allowfullscreen="" loading="lazy" 
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
 
+
+    @if(session('success'))
+  <div style="color: green;">
+    {{ session('success') }}
+  </div>
+@endif
     <!-- Contact Form -->
     <div class="contact-form">
       <h2>Contact Us</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
+<form action="{{ route('contact.send') }}" method="POST">
+    @csrf
+
+         <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <input type="number" name="phone" placeholder="Your Phone Number" required>
+
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
       </form>
     </div>
   </div>
@@ -27,13 +38,14 @@
     <div class="footer-container">
       <!-- Logo & Description -->
       <div class="footer-column">
+       
 <img src="{{ asset('images/reliable-logo-white.png') }}" alt="Reliable Flooring and Fixing Services Logo" class="footer-logo">
         <p>We specialize in importing premium interior and exterior flooring products and decorative finishes.</p>
       </div>
 
       <!-- Contact Info -->
     <div class="footer-column">
-<h2 class="section-heading">Get in Touch</h2>
+<h2 class="footer-section-heading">Get in Touch</h2>
 <address>
   <p><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal</p>
   <p><i class="fas fa-envelope"></i> <a href="mailto:flooringreliable@gmail.com">flooringreliable@gmail.com</a></p>
@@ -43,11 +55,14 @@
 
 
 </div>
+    <img src="https://www.animatedimages.org/data/media/839/animated-nepal-flag-image-0007.gif" 
+         alt="Nepal Flag" 
+         class="flag-icon" />
 
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2025 Reliable Flooring and Fixing Services. All rights reserved.</p>
+      <p>&copy; Designed by Shantosh Oli & Yogesh Chaudhary</p>
     </div>
   </footer>
 </section>

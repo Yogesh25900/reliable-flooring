@@ -9,6 +9,6 @@ class HeterogeneousController extends Controller
     public function show()
     {
         // Just return the view directly, no data needed
-        return view('heterogeneous');
+        return view('products.heterogeneous');
     }
 }

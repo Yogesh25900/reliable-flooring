@@ -52,6 +52,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  
+@push('head')
+<link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+@endpush
+
 </head>
 
 <body>
@@ -59,6 +66,66 @@
 
   @yield('content')
 
+
+  <section class="faq-section">
+  <h2 class="faq-title">We Have <span class="faq-gradient">Answers</span></h2>
+
+  <div class="faq-container">
+
+  <div class="faq-item">
+  <button class="faq-question">What types of flooring materials do you offer?</button>
+  <div class="faq-answer">
+    We offer a wide range of flooring options including vinyl, SPC, laminate, homogeneous, conductive, anti-static, and sports flooring.
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Do you provide both supply and installation services?</button>
+  <div class="faq-answer">
+    Yes, we handle everything from product supply to expert installation for both residential and commercial projects.
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Are your flooring products suitable for hospitals and cleanrooms?</button>
+  <div class="faq-answer">
+    Absolutely. We offer specialized conductive and anti-static flooring ideal for medical environments, labs, and ESD-sensitive areas.
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">How do I get a quotation for my flooring project?</button>
+  <div class="faq-answer">
+    You can contact us via phone or email with your floor area and project details. Our team will prepare a customized estimate for you.
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Do you offer on-site consultation or measurement?</button>
+  <div class="faq-answer">
+    Yes, we offer free site visits in Nepal and provide accurate measurements and material suggestions.
+  </div>
+</div>
+
+
+    <!-- Add more faq-item blocks below -->
+    
+  </div>
+</section>
+
+
   @include('partials.footer')
+
+ <div class="mobile-floating-icons">
+    <a href="https://www.facebook.com/share/17va5tGZ8f/?mibextid=wwXIfr" class="social-icon" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+      </a>
+      <a href="https://instagram.com/reliable.flooring/" class="social-icon" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram" aria-hidden="true"></i>
+      </a>
+    <a href="https://wa.me/9779818303751" target="_blank" class="social-icon" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp" aria-hidden="true"></i>
+</a>
+</div>
 </body>
 </html>

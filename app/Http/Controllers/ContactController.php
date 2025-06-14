@@ -3,29 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Contact;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
-    public function showForm()
-    {
-        return view('contact');
-    }
+    public function send(Request $request)
+{
+    $data = $request->all();
 
-    public function store(Request $request)
-    {
-        // Validate input
-        $request->validate([
-            'name' => 'required',
-            'message' => 'required',
-        ]);
+    // Try sending basic raw email
+    Mail::raw("This is a test", function($message) {
+        $message->to('chaudharyyogesh658@gmail.com')
+                ->subject('Test');
+    });
 
-        // Save to database
-        Contact::create([
-            'name' => $request->name,
-            'message' => $request->message,
-        ]);
+    return "SENT"; // Just confirm it doesn't break here
+}
 
-        return redirect('/contact')->with('success', 'Message sent!');
-    }
 }

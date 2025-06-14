@@ -6,6 +6,8 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomogeneousController;
 use App\Http\Controllers\HeterogeneousController;
 use App\Http\Controllers\FooterContactController;
+use App\Http\Controllers\SportsFlooringController;
+use App\Http\Controllers\ConductiveController;
 
 
 Route::get('/Homogeneous', [HomogeneousController::class, 'index']);
@@ -15,14 +17,13 @@ Route::get('/', [HomeController::class, 'index']);
 
 
 
+use Illuminate\Support\Facades\Route;
 
+// ✅ Homepage
 Route::get('/', [ProductController::class, 'index'])->name('home');
 
-Route::view('/products/homogeneous', 'products.homogeneous');
-Route::redirect('/products/luxury-vinyl', '/products/homogeneous');
-Route::redirect('/products/spc-flooring', '/products/homogeneous');
-
-
+// ✅ Dynamic product detail page (e.g., /products/sports-flooring)
+Route::get('/products/{slug}', [ProductController::class, 'show'])->name('products.show');
 
 Route::post('/footer-contact', [FooterContactController::class, 'submit'])->name('footer.contact');
 
@@ -41,3 +42,11 @@ Route::get('/generate-sitemap', function () {
 
     return 'Sitemap generated!';
 });
+
+
+
+Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
+
+
+
+
